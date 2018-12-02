@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+
+		<meta charset="UTF-8">
+			<title>이유신의 포트폴리오</title>
+				<link rel="stylesheet" type="text/css" href="common/reset.css">
+				<script src="common/prefixfree.min.js"></script>
+				<script src="common/jquery-3.3.1.min.js"></script>
+				<script src="common/jquery-ui.min.js"></script>
+				<script src="common/jquery.mousewheel.min.js"></script>
+				<script src="parallaxScrollweb.js"></script>
+	
+
+				
+
+
+				<style>
+			html,body{height:100%}
+
+			article:nth-child(1){background-image:url("image/아침.png");}
+			article:nth-child(2){background-image:url("image/점심.jpg");}
+			article:nth-child(3){background-image:url("image/저녁.png");}
+			article{ width:100; height: 900px;
+					 background-size: cover;
+					 background-position: right center;
+					 background-attachment:fixed;
+					 position:relative; overflow:hidden;}
+
+
+			section{ width:290px; height:250px; 
+				position:absolute; left:41%;top:10%;}
+		
+			
+			.aaa{background-size:cover;background-image:url("image/aboutme-text.png");width:400px; height:400px; top:0%; left:39%}			
+			.bbb{background-size:cover;background-image:url("image/mywork-text.png"); width:400px; height:400px; left:39%;
+			top:0%;}			
+			.ccc{background-size:cover;background-image:url("image/myart-text.png"); width:300px; height:300px;
+			top:0%; left:42%}
+
+			section:hover{transform:scale(1.2);  transform-origin:50%;  transition:.2s;}
+
+			
+			.menu { width:250px; position:absolute; top:10px; right:10px; z-index:999; cursor:pointer; position:fixed;}
+			.menu img { width:150px; height:100px;top:0%; left:90%; position:fixed; }
+			nav { position:fixed; width:306px; height:100%; right:-306px; top:0; z-index:9999; background:url(image/long.png) no-repeat;}
+			nav .gnb { position:absolute; top:150px; left:40px; }
+			nav li { margin:20px 0; cursor:pointer;}
+			nav .gnb img { width:240px; }
+
+				
+			.open{ position:absolute; background-image:url('image/menuback.png'); width:140px; height:150px; bottom:-20px; right:-10px; z-index:999; cursor:pointer;}
+
+
+			
+
+		</style>
+			
+	</head>
+
+		
+	<body>	
+
+			<p class="menu"><img src="image/menu.png" alt="menu"></p> 
+			<nav>
+				<div class="open"><img src="../image/menuback.png" alt=""></div>   
+    
+    		<ul class="gnb">
+    			<li><a href="page/aboutme.html"><img src="image/sidemenu1-1.png"></a></li>
+    			<li><a href="page/mywork.html"><img src="image/sidemenu2-2.png"></a></li>
+    			<li><a href="page/myart.html"><img src="image/sidemenu3-3.png"></a></li>
+    		</ul>
+        
+        
+        
+    	</nav>
+
+		<div>
+			<article>
+			<a href="page/aboutme.html"><section class="aaa"></section></a>
+		    </article>
+
+		    <article>
+		
+			<a href="page/mywork.html"><section class="bbb"></section></a>
+		    </article>
+
+			<article>
+			
+			<a href="page/myart.html"><section class="ccc"></section></a>
+		    </article>
+
+		</div>
+
+			
+			
+		
+	</body>
+	<script>
+			$(".open").click(function(){
+				$("nav").animate({ right:-306 },400);
+			});
+			$(".menu").click(function(){
+				$("nav").animate({ right:0 },400);
+			});
+
+
+
+			$('.menu').mouseenter(function(){
+				$('.menu>img').attr("src","image/menuhover.png");
+			});
+
+			$('.menu').mouseleave(function(){
+				$('.menu>img').attr("src","image/menu.png");
+			});
+
+
+			$('.open').mouseenter(function(){
+				$('.open>img').attr("src","image/backhover.png");
+			});
+
+			$('.open').mouseleave(function(){
+				$('.open>img').attr("src","image/menuback.png");
+			});
+	</script>		
+</html>
