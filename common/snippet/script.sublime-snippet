@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+			<title></title>
+	</head>
+
+	<body>
+		<script>
+	
+			</script>
+	</body>
+</html>
+
+]]></content>
+	<tabTrigger>sc</tabTrigger>
+</snippet>
